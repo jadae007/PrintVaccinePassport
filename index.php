@@ -108,14 +108,16 @@ for ($i = 1; $i <= $dose; $i++) {
                     </tr>
                 </thead>
                 <tbody>
-                        <?php for ($j = 1; $j <=3; $j++) { ?>
+                        <?php for ($j = 1; $j <=4; $j++) { ?>
                             <tr>
                             <th scope="row"><?php echo checknumbe($j) ?></th>
                                 <td><input type="text" name="namevaccine<?php echo $j ?>" value="<?php echo ${"namevaccine".$j}  ;  ?>" class="form-control">
-                                <input style="margin-top: 3px;" type="text" name="namevaccineL2_<?php echo $j ?>" value="<?php echo ${"namevaccineL2_".$j}  ;  ?>" class="form-control">
-                                <input style="margin-top: 3px;" type="text" name="namevaccineL3_<?php echo $j ?>" value="<?php echo ${"namevaccineL3_".$j}  ;  ?>" class="form-control"></td>
+                                  <input style="margin-top: 3px;" type="text" name="namevaccineL2_<?php echo $j ?>" value="<?php echo ${"namevaccineL2_".$j};?>" class="form-control">
+                                  <input style="margin-top: 3px;" type="text" name="namevaccineL3_<?php echo $j ?>" value="<?php echo ${"namevaccineL3_".$j};?>" class="form-control"></td>
                                 <td><input type="date" name="datevaccine<?php echo $j ?>"  value="<?php echo ${"datevaccine".$j} ;  ?>" class="form-control"></td>
-                                <td><input type="text" name="manufacturer<?php echo $j ?>"  value="<?php echo ${"manufacturer".$j} ;  ?>" class="form-control"></td>
+                                <td><input type="text" name="manufacturer<?php echo $j ?>"  value="<?php echo ${"manufacturer".$j} ;  ?>" class="form-control">
+                                    <input style="margin-top: 3px;" type="text" name="manufacturerL2_<?php echo $j ?>" value="<?php echo ${"manufacturerL2_".$j};?>" class="form-control">
+                                    <input style="margin-top: 3px;" type="text"name="manufacturerL3_<?php echo $j ?>"  value="<?php echo ${"manufacturerL3_".$j};?>" class="form-control"></td>
                                 <td><input type="date" name="cer_date<?php echo $j ?>"  value="<?php echo ${"cer_date".$j} ;  ?>" class="form-control"></td>
                                 <td></td>
                                 <td></td>

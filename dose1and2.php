@@ -27,7 +27,12 @@ $fdatevaccine2 = date_format($fdatevaccine2,"d/m/Y");
 }
 
 $manufacturer1=$_GET["manufacturer1"];
+$manufacturerL2_1 =$_GET["manufacturerL2_1"];
+$manufacturerL3_1 =$_GET["manufacturerL3_1"];
+
 $manufacturer2=$_GET["manufacturer2"];
+$manufacturerL2_2 =$_GET["manufacturerL2_2"];
+$manufacturerL3_2 =$_GET["manufacturerL3_2"];
 
 $cer_date1=$_GET["cer_date1"];
 if(!empty($cer_date1)){
@@ -57,11 +62,11 @@ require('fpdf.php');
 //หน้าปก จากซ้าย,จากบน ::จากซ้าย +1
 $pdf = new FPDF('P','mm',[180,180]);
 //$pdf->AddFont('angsana','','angsa.php');
-$pdf->AddFont('THSarabunNew','','THSarabunNew.php');
+$pdf->AddFont('THSarabunNew_b','','THSarabunNew_b.php');
 $pdf->SetAutoPageBreak(false);
 $pdf->AddPage();
 //$pdf->SetFont('angsana','',15);
-$pdf->SetFont('THSarabunNew','',12);
+$pdf->SetFont('THSarabunNew_b','',12);
 $pdf->setXY(40,36);
 $pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $name ) );
 $pdf->setXY(109,36);
@@ -90,6 +95,10 @@ $pdf->setXY(54,92);
 $pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $fdatevaccine1 ) );
 $pdf->setXY(75,92);
 $pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $manufacturer1 ) );
+$pdf->setXY(75,95);
+$pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $manufacturerL2_1 ) );
+$pdf->setXY(75,98);
+$pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $manufacturerL3_1 ) );
 $pdf->setXY(101,92);
 $pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $fcer_date1 ) );
 }
@@ -110,6 +119,10 @@ $pdf->setXY(54,105);
 $pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $fdatevaccine2 ) );
 $pdf->setXY(75,105);
 $pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $manufacturer2 ) );
+$pdf->setXY(75,108);
+$pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $manufacturerL2_2 ) );
+$pdf->setXY(75,111);
+$pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $manufacturerL3_2 ) );
 $pdf->setXY(101,105);
 $pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $fcer_date2 ) );
 }

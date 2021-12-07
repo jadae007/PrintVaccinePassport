@@ -12,24 +12,44 @@ $sex = $_GET["sex"];
 $namevaccine1 = $_GET["namevaccine1"];
 $namevaccineL2_1 =$_GET["namevaccineL2_1"];
 $namevaccineL3_1 =$_GET["namevaccineL3_1"];
+
 $namevaccine2 = $_GET["namevaccine2"];
 $namevaccineL2_2 =$_GET["namevaccineL2_2"];
 $namevaccineL3_2 =$_GET["namevaccineL3_2"];
+
 $namevaccine3 = $_GET["namevaccine3"];
 $namevaccineL2_3 =$_GET["namevaccineL2_3"];
 $namevaccineL3_3 =$_GET["namevaccineL3_3"];
 
+$namevaccine4 = $_GET["namevaccine4"];
+$namevaccineL2_4 =$_GET["namevaccineL2_4"];
+$namevaccineL3_4 =$_GET["namevaccineL3_4"];
+
 $datevaccine1 = $_GET["datevaccine1"];
 $datevaccine2 = $_GET["datevaccine2"];
 $datevaccine3 = $_GET["datevaccine3"];
+$datevaccine4 = $_GET["datevaccine4"];
 
 $manufacturer1 = $_GET["manufacturer1"];
+$manufacturerL2_1 =$_GET["manufacturerL2_1"];
+$manufacturerL3_1 =$_GET["manufacturerL3_1"];
+
 $manufacturer2 = $_GET["manufacturer2"];
+$manufacturerL2_2 =$_GET["manufacturerL2_2"];
+$manufacturerL3_2 =$_GET["manufacturerL3_2"];
+
 $manufacturer3 = $_GET["manufacturer3"];
+$manufacturerL2_3 =$_GET["manufacturerL2_3"];
+$manufacturerL3_3 =$_GET["manufacturerL3_3"];
+
+$manufacturer4 = $_GET["manufacturer4"];
+$manufacturerL2_4 =$_GET["manufacturerL2_4"];
+$manufacturerL3_4 =$_GET["manufacturerL3_4"];
 
 $cer_date1 = $_GET["cer_date1"];
 $cer_date2 = $_GET["cer_date2"];
 $cer_date3 = $_GET["cer_date3"];
+$cer_date4 = $_GET["cer_date4"];
 
 ?>
 <!doctype html>
@@ -123,14 +143,16 @@ $cer_date3 = $_GET["cer_date3"];
                 </thead>
                 <tbody>
                     <?php echo $vacc ?>
-                <?php for ($j = 1; $j <=3; $j++) { ?>
+                <?php for ($j = 1; $j <=4; $j++) { ?>
                             <tr>
                             <th scope="row"><?php echo checknumbe($j) ?></th>
                                 <td><input type="text" name="namevaccine<?php echo $j ?>" value="<?php echo ${"namevaccine".$j}  ;  ?>" class="form-control">
-                                <input style="margin-top: 3px;" type="text" name="namevaccineL2_<?php echo $j ?>" value="<?php echo ${"namevaccineL2_".$j}  ;  ?>" class="form-control">
-                                <input style="margin-top: 3px;" type="text" name="namevaccineL3_<?php echo $j ?>" value="<?php echo ${"namevaccineL3_".$j}  ;  ?>" class="form-control"></td>
+                                  <input style="margin-top: 3px;" type="text" name="namevaccineL2_<?php echo $j ?>" value="<?php echo ${"namevaccineL2_".$j}  ;  ?>" class="form-control">
+                                  <input style="margin-top: 3px;" type="text" name="namevaccineL3_<?php echo $j ?>" value="<?php echo ${"namevaccineL3_".$j}  ;  ?>" class="form-control"></td>
                                 <td><input type="date" name="datevaccine<?php echo $j ?>"  value="<?php echo ${"datevaccine".$j} ;  ?>" class="form-control"></td>
-                                <td><input type="text" name="manufacturer<?php echo $j ?>"  value="<?php echo ${"manufacturer".$j} ;  ?>" class="form-control"></td>
+                                <td><input type="text" name="manufacturer<?php echo $j ?>"  value="<?php echo ${"manufacturer".$j} ;  ?>" class="form-control">
+                                  <input style="margin-top: 3px;" type="text" name="manufacturerL2_<?php echo $j ?>" value="<?php echo ${"manufacturerL2_".$j};?>" class="form-control">
+                                  <input style="margin-top: 3px;" type="text"name="manufacturerL3_<?php echo $j ?>"  value="<?php echo ${"manufacturerL3_".$j};?>" class="form-control"></td>
                                 <td><input type="date" name="cer_date<?php echo $j ?>"  value="<?php echo ${"cer_date".$j} ;  ?>" class="form-control"></td>
                                 <td></td>
                                 <td></td>
@@ -163,19 +185,33 @@ $cer_date3 = $_GET["cer_date3"];
                                                                 "&datevaccine1=" . $datevaccine1 .
                                                                 "&datevaccine2=" . $datevaccine2 .
                                                                 "&manufacturer1=" . $manufacturer1 .
+                                                                "&manufacturerL2_1=" .$manufacturerL2_1.
+                                                                "&manufacturerL3_1=" .$manufacturerL3_1.
                                                                 "&manufacturer2=" . $manufacturer2 .
+                                                                "&manufacturerL2_2=" .$manufacturerL2_2.
+                                                                "&manufacturerL3_2=" .$manufacturerL3_2.
                                                                 "&cer_date1=" . $cer_date1 .
                                                                 "&cer_date2=" . $cer_date2;
                                                             ?>" role="button" target="_blank">พิมพ์เข็มที่ 1-2</a>
         
         <?php if((!empty($namevaccine3))&&(!empty($manufacturer3))){ ?>
         <a class="btn btn-success" href="dose3.php?namevaccine3=<?php echo $namevaccine3.
-         "&namevaccineL2_3=".$namevaccineL2_3.
-         "&namevaccineL3_3=".$namevaccineL3_3.
+        "&namevaccineL2_3=".$namevaccineL2_3.
+        "&namevaccineL3_3=".$namevaccineL3_3.
         "&datevaccine3=".$datevaccine3.
         "&manufacturer3=".$manufacturer3.
-        "&cer_date3=" . $cer_date3;
-        ?>" role="button" target="_blank">พิมพ์เข็มที่ 3</a>
+        "&manufacturerL2_3=" .$manufacturerL2_3.
+        "&manufacturerL3_3=" .$manufacturerL3_3.
+        "&cer_date3=" . $cer_date3.
+        "&namevaccine4=". $namevaccine4.
+        "&namevaccineL2_4=".$namevaccineL2_4.
+        "&namevaccineL3_4=".$namevaccineL3_4.
+        "&datevaccine4=".$datevaccine4.
+        "&manufacturer4=".$manufacturer4.
+        "&manufacturerL2_4=" .$manufacturerL2_4.
+        "&manufacturerL3_4=" .$manufacturerL3_4.
+        "&cer_date4=" . $cer_date4;
+        ?>" role="button" target="_blank">พิมพ์เข็มที่ 3-4</a>
         <?php } ?>
         <div class="col-4"></div>
     </div>
