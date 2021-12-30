@@ -69,7 +69,7 @@ $pdf->AddPage();
 $pdf->SetFont('THSarabunNew_b','',12);
 $pdf->setXY(40,36);
 $pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $name ) );
-$pdf->setXY(109,36);
+$pdf->setXY(107,36);
 $pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $birthday ) );
 $pdf->setXY(145,36);
 $pdf->Cell( 0  , 0 , iconv( 'UTF-8','cp874' , $sex ) );
