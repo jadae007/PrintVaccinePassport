@@ -68,7 +68,7 @@ $pdf->setXY(75, 53);
 $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $manufacturerL3_3));
 $pdf->setXY(101, 47);
 $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $fcer_date3));
-$pdf->setXY(123, 53);
+$pdf->setXY(125, 57);
 $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', "Medical Doctor"));
 
 if (!empty($namevaccine4)) {
@@ -92,7 +92,7 @@ if (!empty($namevaccine4)) {
   $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $manufacturerL3_4));
   $pdf->setXY(101, 64);
   $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $fcer_date4));
-  $pdf->setXY(123, 70);
+  $pdf->setXY(125, 74);
   $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', "Medical Doctor"));
 }
 $pdf->Output();

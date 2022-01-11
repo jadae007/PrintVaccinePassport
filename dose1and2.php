@@ -54,7 +54,7 @@ $year = $_GET["year"];
 if (!empty($birthday)) {
   $now = date("Y-m-d");
   if ($now == $birthday) {
-    $birthday = "--/--/" . $year;
+    $birthday = " XX XX " . $year;
   } else {
     $birthday = date_create($birthday);
     $birthday = date_format($birthday, "d F Y");
@@ -103,7 +103,7 @@ if (!empty($namevaccine1)) {
   $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $manufacturerL3_1));
   $pdf->setXY(101, 92);
   $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $fcer_date1));
-  $pdf->setXY(123, 98);
+  $pdf->setXY(124, 98);
   $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', "Medical Doctor"));
 }
 
@@ -129,7 +129,7 @@ if (!empty($namevaccine2)) {
   $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $manufacturerL3_2));
   $pdf->setXY(101, 105);
   $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $fcer_date2));
-  $pdf->setXY(123, 111);
+  $pdf->setXY(124, 112);
   $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', "Medical Doctor"));
 }
 
