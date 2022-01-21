@@ -201,7 +201,7 @@ $cer_date4 = $_GET["cer_date4"];
                                                           "&cer_date2=" . $cer_date2;
                                                         ?>" role="button" target="_blank">พิมพ์เข็มที่ 1-2</a>
 
-    <?php if ((!empty($namevaccine3)) && (!empty($manufacturer3))) { ?>
+    <?php if ((!empty($namevaccine3)) && (!empty($manufacturer3)) || (!empty($namevaccine4)) && (!empty($manufacturer4))) { ?>
       <a class="btn btn-success" href="dose3.php?namevaccine3=<?php echo $namevaccine3 .
                                                                 "&namevaccineL2_3=" . $namevaccineL2_3 .
                                                                 "&namevaccineL3_3=" . $namevaccineL3_3 .

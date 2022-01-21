@@ -47,29 +47,31 @@ $pdf->SetAutoPageBreak(false);
 $pdf->AddPage();
 //$pdf->SetFont('angsana','',15);
 $pdf->SetFont('THSarabunNew_b', '', 12);
+if(!empty($namevaccine3)){
 
-$pdf->setXY(11, 47);
-$pdf->Cell(0, 0, iconv('UTF-8', 'cp874', "เข็ม 3"));
-$pdf->setXY(8, 50);
-$pdf->Cell(0, 0, iconv('UTF-8', 'cp874', "(3th Dose)"));
-$pdf->setXY(26, 47);
-$pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $namevaccine3));
-$pdf->setXY(26, 50);
-$pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $namevaccine2_3));
-$pdf->setXY(26, 53);
-$pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $namevaccine3_3));
-$pdf->setXY(53, 47);
-$pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $fdatevaccine3));
-$pdf->setXY(75, 47);
-$pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $manufacturer3));
-$pdf->setXY(75, 50);
-$pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $manufacturerL2_3));
-$pdf->setXY(75, 53);
-$pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $manufacturerL3_3));
-$pdf->setXY(101, 47);
-$pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $fcer_date3));
-$pdf->setXY(125, 57);
-$pdf->Cell(0, 0, iconv('UTF-8', 'cp874', "Medical Doctor"));
+  $pdf->setXY(11, 47);
+  $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', "เข็ม 3"));
+  $pdf->setXY(8, 50);
+  $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', "(3th Dose)"));
+  $pdf->setXY(26, 47);
+  $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $namevaccine3));
+  $pdf->setXY(26, 50);
+  $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $namevaccine2_3));
+  $pdf->setXY(26, 53);
+  $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $namevaccine3_3));
+  $pdf->setXY(53, 47);
+  $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $fdatevaccine3));
+  $pdf->setXY(75, 47);
+  $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $manufacturer3));
+  $pdf->setXY(75, 50);
+  $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $manufacturerL2_3));
+  $pdf->setXY(75, 53);
+  $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $manufacturerL3_3));
+  $pdf->setXY(101, 47);
+  $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', $fcer_date3));
+  $pdf->setXY(125, 57);
+  $pdf->Cell(0, 0, iconv('UTF-8', 'cp874', "Medical Doctor"));
+}
 
 if (!empty($namevaccine4)) {
   $pdf->setXY(11, 64);
